@@ -1,0 +1,18 @@
+.green {
+    font-family: 펜흘림;
+    font-size: 25pt;
+    color: teal;
+}
+
+.yellow {
+    font-family: 휴먼굵은팸체;
+    font-size: 15pt;
+    color: #FACC2E;
+}
+
+.red {
+    font-family: 휴먼매직채;
+    font-size: 18pt;
+    font-weight: bold;
+    color: red;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-6(2)</title>
+    <style>
+        /* 추가: 이미지 회전을 위한 스타일 설정 */
+        .rotate90 {
+            transform: rotate(90deg);
+        }
+    </style>
+    <script>
+        let degree = 90;
+        function rotate(obj) {
+            // 수정: 템플릿 리터럴 사용 및 rotate 스타일 클래스 추가
+            obj.style.transform = `rotate(${degree}deg)`;
+            degree = (degree + 90) % 360;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>클릭하면 90도로 회전</h3>
+    <hr>
+    <!-- 수정: 클래스 추가 -->
+    <img src="../media/patrick.jpg" width="50%" class="rotate90" onclick="rotate(this);">
+</body>
+
+</html>

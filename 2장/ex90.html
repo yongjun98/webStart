@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-6</title>
+</head>
+
+<body>
+    <script>
+        arr = ["hello", 10, 32.6, true];
+        function find(arr, value) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == value) {
+                    return i;
+                }
+            }
+            return "해당하는 값이 없습니다.";
+        }
+        alert(find(arr, "hello"));
+    </script>
+</body>
+
+</html>

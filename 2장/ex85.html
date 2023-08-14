@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-1</title>
+    <script>
+        function test() {
+            var i;
+            var j = 0;
+            var sDate = new Date().getTime();
+
+            for (i = 0; i < 10000000; i++) {
+                j += i;
+            }
+            var eDate = new Date().getDate();
+            var resDate = sDate - eDate;
+
+            document.writeln(resDate + "밀리초가 걸렸음!");
+        }
+        test();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

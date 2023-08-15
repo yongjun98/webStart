@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-8</title>
+    <script>
+        function size() {
+            var li = document.getElementsByTagName("li");
+            for (var i = 0; i < li.length; i++) {
+                li[i].onclick = function (e) {
+                    for (var i = 0; i < li.length; i++) {
+                        li[i].style.fontSize = "lem";
+                    }
+                    e.target.style.fontSize = "1.3em";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="size()">
+    <h3>아이템 클릭하면 1.3배 크기</h3>
+    <hr>
+    <ul>
+        <li>자전거로 대한민국 일주</li>
+        <li>책 읽기</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+</body>
+
+</html>

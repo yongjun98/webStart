@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-5</title>
+    <script>
+        function change_img(image1, image2) {
+            document.getElementById(image1).src = image2;
+        }
+    </script>
+</head>
+
+<body>
+    <img src="../media/daramge.jpg" id="img" width="200" height="200" alt=""
+        onclick="change_img(id,'../media/Spongebob.jpg')">
+    <p>스위치를 클릭하여 보세요!</p>
+</body>
+
+</html>

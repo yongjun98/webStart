@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-6</title>
+    <script>
+        function email() {
+            var status = document.getElementById('msg1');
+            var elem = document.getElementById('email');
+            var exp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\]+\.[a-zA-z0-9]{2,}$/;
+            if (elem.value.match(exp))
+                status.innerHTML;
+            else
+                status.innerHTML = "올바른 이메일을 입력하시오!";
+        }
+        function phone_num(elem) {
+            var status = document.getElementById('msg');
+            var elem = document.getElementById('phone');
+            var exp = /^\d{3}-\d{4}-\d{4}$/;
+
+            if (elem.value.match(exp))
+                status.innerHTML;
+            else
+                status.innerHTML = "올바른 전화번호를 입력하시오";
+        }
+
+        function checkPassword() {
+            var min = 6;
+            var max = 8;
+            var status = document.getElementById('msg2');
+            var elem = document.getElementById('password').value;
+
+            if (elem1 == elem2)
+                status.innerHTML
+            else
+                status.innerHTML = "비밀번호가 맞지 않습니다.";
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <h1>회원 신청서</h1>
+        <pre>
+            <input type="text" id="name" size="20"><br/>
+            <input type="radio" id="gender" value="g1">남자
+            <input type="radio" id="gender" value="g2">여자 <br/>
+            <input type="text" id="phone" onkeyup="phone_num()"><em id="msg"></em><br/>
+            <input type="text" id="email" onkeyup="email()"><em id="msg1"></em><br/>
+            <input type="password" id="password" onkeyup="checkPassword()"><em id="msg2"></em><br/>
+            <input type="password" id="password1" onkeyup="matchPassword()"><em id="msg3"></em><br/>
+            <input type="button" value="제출">
+            <input type="button" value="지우기">
+        </pre>
+    </form>
+</body>
+
+</html>

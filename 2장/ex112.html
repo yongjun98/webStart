@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>setTime()</title>
+    <style>
+        div {
+            background-color: aliceblue;
+            font-size: 2em;
+            width: 50%;
+        }
+    </style>
+    <script>
+        function split() {
+            let div = document.getElementById("clock") //안전빵으로 ID를 해놓는게 더 좋다..!
+            let now = new Date()
+            div.innerHTML = now.toLocaleString().split(" ").slice(3, 5).join(" ")
+            setTimeout("split();", 1000)
+        }
+    </script>
+</head>
+
+<body onload="split()">
+    <h3>div 태그에 시계 만들기</h3>
+    <hr>
+    <div id="clock"></div>
+</body>
+
+</html>

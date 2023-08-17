@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 10-6</title>
+    <style>
+        div {
+            background-color: aliceblue;
+            font-size: 2em;
+            width: 50%;
+            color: gray;
+        }
+    </style>
+    <script>
+        function printtime() {
+            let div = document.getElementById("clock")
+            let now = new Date()
+            div.innerHTML = now.toLocaleString().split(" ").slice(3, 5).join(" ")
+        }
+        let timer = null
+        function start() {
+            printtime()
+        }
+        function stop() {
+            if (timer != null) {
+                clearInterval(timer)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    <hr>
+    <div id="clock" onclick="stop()"></div>
+    <div></div>
+</body>
+
+</html>

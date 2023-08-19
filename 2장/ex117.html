@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-2</title>
+    <script>
+        function drawPolygon(ctx, xArray, yArray) {
+            ctx.beginPath()
+            ctx.moveTo(xArray[0], yArray[0])
+            ctx.lineTo(xArray[3], yArray[3])
+            ctx.lineTo(xArray[2], yArray[2])
+            ctx.lineTo(xArray[1], yArray[1])
+            context.closePath()
+            context.stroke()
+        }
+    </script>
+</head>
+
+<body>
+    <h3>drawPolygon() 만들기</h3>
+    <hr>
+    <canvas id="myCanvas" width="200" height="220" style="background-color: aliceblue;"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var context = canvas.getContext("2d")
+        var xs = [100, 10, 150, 210]
+        var ys = [10, 100, 200, 100]
+        drawPolygon(context, xs, ys)
+    </script>
+</body>
+
+</html>

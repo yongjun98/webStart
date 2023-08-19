@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        td {
+            width: 100;
+            text-align: right;
+        }
+    </style>
+    <script>
+        function draw() {
+            let x = document.getElementById("x").value
+            let y = document.getElementById("y").value
+            let width = document.getElementById("width").value
+            let height = document.getElementById("height").value
+            let line = document.getElementById("line").value
+            let color = document.getElementById("color").value
+            let canvas = document.getElementById("myCanvas")
+            let context = canvas.getContext("2d")
+
+            context.beginPath()
+            context.strokeStyle = color
+            context.linewidth = width
+            context.rect(x, y, width, height)
+            context.stroke()
+        }
+        function erase() {
+            let canvas = document.getElementById("myCanvas")
+            let context = canvas.getContext("2d")
+
+            context.beginPath()
+        }
+    </script>
+</head>
+
+<body>
+    <h3>폼으로 사각형 그리기</h3>
+    <hr>
+    <form>
+        <table>
+            <tr>
+                <td><label>x <input type="number" id="x"></label></td>
+                <td><label>y <input type="number" id="y"></label></td>
+            </tr>
+            <tr>
+                <td><label>width <input type="number" id="width"></label></td>
+                <td><label>height <input type="number" id="height"></label></td>
+            </tr>
+            <tr>
+                <td><label>선굵기<input type="number" id="line"></label></td>
+                <td><label>선색 <input type="color" id="color"></label></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="draw()">그리기</button></td>
+                <td><button type="button" onclick="erase()">지우기</button></td>
+            </tr>
+            <canvas id="myCanvas" width="220" height="220" style="background-color: aliceblue;"></canvas>
+        </table>
+    </form>
+</body>
+
+</html>
+[출처] [명품 html+css3+javascript] 11장 실습문제|작성자 하루

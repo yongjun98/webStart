@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-1</title>
+    <script>
+        function drawCircle(ctx, x, y, radius) {
+            ctx.beginPath()
+            ctx.strokeStyle = "gray"
+            ctx.arc(x, y, radius, 2 * Math.PI, 0)
+            ctx.stroke()
+        }
+    </script>
+</head>
+
+<body>
+    <h3>drawCircle() 만들기</h3>
+    <hr>
+    <canvas id="myCanvas" width="300" height="220" style="background-color: aliceblue;"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas")
+        var context = canvas.getContext("2d")
+        drawCircle(context, 100, 100, 80)
+        drawCircle(context, 150, 150, 100)
+    </script>
+</body>
+
+</html>

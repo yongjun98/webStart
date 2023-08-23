@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-2</title>
+    <script>
+        var item = document.getElementById("item");
+        var count = document.getElementById("count");
+
+        function store() {
+            if (!window.sessionStorage) {
+                alert("세션 스토리지를 지원하지 않습니다.")
+                return;
+            }
+            sessionStorage.setItem(item.value.count.value);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>세션 스토리지에 구입 리스트 저장</h3>
+    <hr>
+    <form>
+        <label>품목명 : <input id="item" type="text" size="10"></label>
+        <label>개수 : <input id="item" type="text" size="10"></label>
+        <input type="button" value="저장" onclick="store()">
+        <a href="practice12-2-2.html" target="_self">구입리스트 저장 페이지로</a>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12장 OpenChallenge-2</title>
+</head>
+
+<body>
+    <h3>나의 단어장 모두 출력</h3>
+    <hr>
+    <div id="result" style="background: yellow"></div>
+
+    <script>
+        var result = document.getElementById("result");
+
+        if (!window.localStorage) {
+            alert("로컬스토리지를 지원하지 않습니다.")
+            exit();
+        }
+        viewCall();
+        window.addEventListener("storage", StorageEventListner, false);
+        function StorageEventListner(e) {
+            viewCall();
+        }
+
+        function viewCall() {
+            var temp = "";
+
+            for (i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                var val = localStorage.getItem(key);
+
+                temp += i + 1 + " <bold>" + key + "</bold> " + val + "<br>";
+            }
+            result.innerHTML = temp;
+        }
+    </script>
+</body>
+
+</html>

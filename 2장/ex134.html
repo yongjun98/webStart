@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드추가</title>
+    <style>
+        h3 {
+            color: aquamarine;
+            background-color: black;
+        }
+
+        hr {
+            color: black;
+        }
+
+        p {
+            color: aqua;
+            justify-content: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>노드 추가</h3>
+    <hr>
+    <p>
+        박명수 - 바다의 왕자
+    </p>
+    <script>
+        function addtext(t) {
+            if (document.createTextNode) {
+                var node = document.createTextNode(t);
+                document.getElementById("target").appendChild(node);
+            }
+        }
+    </script>
+    <div id="target" onclick="addtext('동적으로 텍스트가 추가됩니다.')" style="font: 20px bold;">여기를 클릭하세요.</div>
+</body>
+
+</html>

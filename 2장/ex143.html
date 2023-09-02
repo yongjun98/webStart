@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 실습</title>
+    <style>
+        h3 {
+            display: inline;
+        }
+
+        span {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        let state = "hidden";
+        function change() {
+            if (state == "hidden") {
+                state = "visible"
+            }
+            else {
+                state = "hidden"
+            }
+            let spanArray = document.querySelectorAll("span")
+            for (let span of spanArray) {
+                span.style.visibility = state;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>빈 곳에 숨은 단어</h3>
+    <button type="button" onclick="change();">showhide</button>
+    <hr>
+    <ul>
+        <li> 1 (<span>love</span>) you </li>
+        <li>CSS is casacading (<span>style</span>)sheet</li>
+        <li>응답하라 (<span>1998</span>)</li>
+    </ul>
+</body>
+
+</html>

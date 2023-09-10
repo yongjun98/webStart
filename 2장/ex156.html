@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 복습</title>
+    <script>
+        function change() {
+            let found = null;
+            let newForm = document.getElementsByName("fruit");
+            let img = document.getElementById("fruitimage");
+            for (let i = 0; i < newForm.length; i++) {
+                if (newForm[i].checked == true) {
+                    found = newForm[i];
+                    break;
+                }
+            }
+            img.src = found.value;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr>
+    <form>
+        <input type="radio" name="fruit" value="../media/daramge.jpg" checked onchange="change()">다람이
+        <input type="radio" name="fruit" value="../media/patrick.jpg" onchange="change()">스폰지밥
+        <input type="radio" name="fruit" value="../media/Elsa.jpg" onchange="change()">뚱이
+    </form>
+    <img id="fruitimage" src="../media/shoorak.jpg">
+</body>
+
+</html>

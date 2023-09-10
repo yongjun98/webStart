@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트복습</title>
+    <script>
+        function procKey(ev) {
+            if (ev.KeyCode == 13) {
+                let exp = eval(document.querySelector("#exp").value)
+                document.querySelector("#val").value = exp
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <p>
+        수식을 입력하고 &lt;Enter&gt;을 입력하세요
+    </p>
+    <form>
+        식 <input type="text" id="exp" onkeypress="procKey(event)"><br>
+        값 <input type="text" id="val">
+    </form>
+</body>
+
+</html>
